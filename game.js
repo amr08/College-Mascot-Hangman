@@ -10,11 +10,9 @@
    
 
 
-
+exports.wordSetUp = function() {
 
 	wordPicked = word[Math.floor(Math.random() * 1)];
 	letters = wordPicked.split("");
 
-
-
-
+};

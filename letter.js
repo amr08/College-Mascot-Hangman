@@ -2,16 +2,17 @@
 
 //should conttrol whether or not a letter appears as "_" or as itself on -screen
 
-var game = require('./game.js');
+// var game = require('./game.js');
+var word = require('./word.js');
 
 
 
-global.nums = letters.length
 
 
-	
 
-console.log(global.userInput)
+
+
+console.log(userInput)
 
 
 function Placeholder(holders, nums) {
@@ -22,25 +23,25 @@ function Placeholder(holders, nums) {
 		this.holders.push("_")
 		}
 	}
-	this.inWord = function() {
+	// this.inWord = function() {
 
-		if(global.isInWord) {
+	// 	if(global.isInWord) {
 	 		
-	 		 for(var k = 0; k < nums; k++) {
+	//  		 for(var k = 0; k < nums; k++) {
 
-	             if (global.wordPicked[k] == global.userInput) {
+	//              if (global.wordPicked[k] == global.userInput) {
 
-	                  this.holders[k] = global.userInput;
+	//                   this.holders[k] = global.userInput;
 	                  
-	                  this.print();
+	//                   this.print();
 	              
-	             }
+	//              }
 	             
-	         }
+	//          }
 
-	 	}
+	//  	}
 
-	}
+	// }
 	this.print = function () {
 		console.log(this.holders)
 		}
@@ -52,13 +53,16 @@ function Placeholder(holders, nums) {
 var newWord = new Placeholder([],nums)
 
 
+
 // Placeholder.prototype.print = function() {
 // 	console.log(this.holders)
 
 // }
 
-newWord.replace();
-newWord.print();
-newWord.inWord();
 
+// newWord.print();
+// newWord.inWord();
+word.checkLetter();
+newWord.replace();
+console.log(newWord.holders)
 
