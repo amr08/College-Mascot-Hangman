@@ -8,13 +8,6 @@ var word = require('./word.js');
 
 
 
-
-
-
-
-console.log(userInput)
-
-
 function Placeholder(holders, nums) {
 	this.holders = holders;
 	this.nums = nums;
@@ -23,25 +16,28 @@ function Placeholder(holders, nums) {
 		this.holders.push("_")
 		}
 	}
-	// this.inWord = function() {
+	this.inWord = function() {
 
-	// 	if(global.isInWord) {
+		if(global.isInWord) {
 	 		
-	//  		 for(var k = 0; k < nums; k++) {
+	 		 for(var k = 0; k < nums; k++) {
 
-	//              if (global.wordPicked[k] == global.userInput) {
+	             if (global.wordPicked[k] == global.userInput) {
 
-	//                   this.holders[k] = global.userInput;
+	                  this.holders[k] = global.userInput;
 	                  
-	//                   this.print();
+	                  this.print();
 	              
-	//              }
+	             }
+	             else {
+	             	 global.guessesLeft--;
+	             }
 	             
-	//          }
+	         }
 
-	//  	}
+	 	}
 
-	// }
+	}
 	this.print = function () {
 		console.log(this.holders)
 		}
@@ -50,7 +46,7 @@ function Placeholder(holders, nums) {
 	
 
 
-var newWord = new Placeholder([],nums)
+global.newWord = new Placeholder([],nums)
 
 
 
@@ -59,10 +55,11 @@ var newWord = new Placeholder([],nums)
 
 // }
 
+console.log(guessesLeft)
 
-// newWord.print();
-// newWord.inWord();
 word.checkLetter();
-newWord.replace();
-console.log(newWord.holders)
+main.rounds();
+global.newWord.replace();
+global.newWord.inWord();
+
 

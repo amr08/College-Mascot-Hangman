@@ -13,7 +13,6 @@ global.isInWord = false;
 
 
 
-
 exports.checkLetter = function() {
 
 
@@ -21,7 +20,6 @@ exports.checkLetter = function() {
 
 		if(userInput == global.wordPicked[j]) {
  			isInWord = true;
- 			console.log("working")
  		}
  	}
 

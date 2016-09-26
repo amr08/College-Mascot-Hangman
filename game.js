@@ -7,6 +7,10 @@
 	global.word = ["seminoles"];
 	global.wordPicked = "";
     global.letters = [];
+    
+    global.wins = 0;
+	global.losses = 0;
+	global.guessesLeft = 5;
    
 
 
