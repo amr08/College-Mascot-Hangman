@@ -60,6 +60,6 @@ console.log(guessesLeft)
 word.checkLetter();
 main.rounds();
 global.newWord.replace();
-global.newWord.inWord();
+
 
 
