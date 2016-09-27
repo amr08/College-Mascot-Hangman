@@ -27,17 +27,23 @@ function Placeholder(holders, nums) {
 	                  this.holders[k] = global.userInput;
 	                  
 	                  this.print();
-	              
-	             }
-	             else {
-	             	 global.guessesLeft--;
-	             }
-	             
+
+	                }
+
 	         }
 
-	 	}
+	    }  else {
+	            global.guessesLeft--;
+	            console.log("Your Guesses Left " + guessesLeft)
+	         	alreadyGuessed.push(global.userInput)
+	          	console.log("Letters already guessed letter(s) " + alreadyGuessed)
 
-	}
+	        }
+
+	     getInput();
+	             
+    }
+
 	this.print = function () {
 		console.log(this.holders)
 		}
@@ -50,16 +56,8 @@ global.newWord = new Placeholder([],nums)
 
 
 
-// Placeholder.prototype.print = function() {
-// 	console.log(this.holders)
-
-// }
-
-console.log(guessesLeft)
-
-word.checkLetter();
-main.rounds();
+// main.rounds();
 global.newWord.replace();
 
-
+getInput();
 

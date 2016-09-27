@@ -7,7 +7,7 @@ var game = require('./game.js');
 game.wordSetUp();
 
 
-// global.userInput = process.argv[2];
+
 global.nums = letters.length;
 global.isInWord = false;
 
@@ -15,20 +15,6 @@ global.isInWord = false;
 
 // checkLetter();
 // function checkLetter() {
-
-//   for (var j = 0; j < global.nums; j++) {
-
-// 		if(newLetter == global.wordPicked[j]) {
-//  			isInWord = true;
-//  			global.newWord.inWord();
-//  			checkLetter();
-//  		}
-//  		else {
-//  			console.log("try again!")
-//  		}
-//  	 }
-
-// }
 
 
 global.userInput = []
@@ -38,10 +24,12 @@ global.userGuessWord = []
 global.alreadyGuessed = []
 
 
-function getInput() {
+
+
+global.getInput = function() {
 
 inquirer.prompt([
-		{
+	{
 		type: "input",
 		message: "Guess a letter",
 		name: "letter"
@@ -74,30 +62,23 @@ checker();
 
 }
 
-function checker() {
-for (var j = 0; j < global.nums; j++) {
+global.checker = function() {
 
-		if(userInput == global.wordPicked[j]) {
-			console.log("correct");
-			// console.log(userGuessWord)
-			isInWord = true;
-			getInput();
-			}
+	global.newWord.inWord();
+
+		for (var j = 0; j < global.nums; j++) {
+
+			if(userInput == global.wordPicked[j]) {
+				isInWord = true;
+				}
+
+
 		}
+	
 			
+      
 }
 
 
-getInput();
 
-
-// String.protoype.capitalize = function(){
-// 	this.charAt(0).toUpperCase();
-	
-// 	this.toLowerCase();
-// 	var stringArray = this.split('')
-// 	stringArray[0] = stringArray.toUpperCase();
-// 	stringArray.join("")
-// 	console.log(this)
-// }
 
