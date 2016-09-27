@@ -1,23 +1,24 @@
-//constructor files
+// //constructor files
 
-//should contain all of the methods wich will check the letters guess vs the random word selected
+
+
+
+// //should contain all of the methods wich will check the letters guess vs the random word selected
 var inquirer = require("inquirer");
 var game = require('./game.js');
+var letter = require('./letter.js');
 var main = require("./main.js")
 
 game.wordSetUp();
 
 
+  
 
 global.nums = letters.length;
-
-
-
 global.userInput = []
-
 global.userGuessWord = []
-
 global.isInWord = []
+
 
 
 global.getInput = function() {
@@ -32,25 +33,9 @@ inquirer.prompt([
 	]).then(function (user) {
 
 userInput = user.letter
-// userGuessWord.push(user.letter);
+userGuessWord.push(user.letter);
 checker();
-rounds();
 
-
-
-		// if(userGuessWord == global.wordPicked[j]) {
- 	// 		isInWord = true;
- 	// 		global.newWord.inWord();
- 	// 		userGuessWord.push(user.letter);
- 	// 		getInput();
- 	// 		"working"
- 	// 	}
- 	// 	else {
- 	// 		console.log("try again!")
- 	// 		global.guessesLeft--
- 	// 		getInput();
- 	// 	}
- 	 
 
 });
 
@@ -61,7 +46,7 @@ global.checker = function() {
 
 
 
-	global.newWord.inWord();
+	
 
 	isInWord = false;
 
@@ -69,16 +54,17 @@ global.checker = function() {
 
 			if(userInput == global.wordPicked[j]) {
 				isInWord = true;
+			
+
 				}
-
 		
-
 
 		}
 
-			
+	global.inWord();	
       
 }
+
 
 
 
