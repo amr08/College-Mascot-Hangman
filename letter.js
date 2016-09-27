@@ -2,8 +2,10 @@
 
 //should conttrol whether or not a letter appears as "_" or as itself on -screen
 
-// var game = require('./game.js');
+
 var word = require('./word.js');
+
+
 
 
 
@@ -17,7 +19,7 @@ function Placeholder(holders, nums) {
 		}
 	}
 	this.inWord = function() {
-
+  
 		if(global.isInWord) {
 	 		
 	 		 for(var k = 0; k < nums; k++) {
@@ -52,9 +54,8 @@ function Placeholder(holders, nums) {
 	
 
 
+
 global.newWord = new Placeholder([],nums)
-
-
 
 // main.rounds();
 global.newWord.replace();
