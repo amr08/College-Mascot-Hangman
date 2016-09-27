@@ -45,9 +45,6 @@ checker();
 global.checker = function() {
 
 
-
-	
-
 	isInWord = false;
 
 		for (var j = 0; j < global.nums; j++) {
@@ -57,7 +54,6 @@ global.checker = function() {
 			
 
 				}
-		
 
 		}
 

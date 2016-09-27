@@ -23,17 +23,17 @@
 
 
 exports.wordSetUp = function() {
+	
     console.log("Wins: " + global.wins)
 	console.log("Losses: " + global.losses)
 	console.log("Yay! New word!")
+
 	wordPicked = word[Math.floor(Math.random() * 1)];
 	letters = wordPicked.split("");
 
 	guessesLeft = 5;
 	alreadyGuessed = []
 	
-	
-
 
 
 };

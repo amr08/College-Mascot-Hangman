@@ -13,17 +13,12 @@
 	global.inWord = function() {
   
 		if(global.isInWord) {
-			 
-	 		
+
 	 		 for(var k = 0; k < nums; k++) {
 
 	             if (global.wordPicked[k] == global.userInput) {
 
 	                  global.holders[k] = global.userInput;
-	                 
-
-	                console.log(global.holders)
-
 
 	                }
 
@@ -40,9 +35,10 @@
 	  
 	   
 	  global.rounds();
-	 global.getInput();
-	             
+	  console.log(global.holders)
+	  global.getInput();	             
     }
+
 
 global.rounds = function() {
 
