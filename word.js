@@ -55,7 +55,7 @@
 
 			}
 
-		global.inWord();	
+		inWord();	
 	      
 	};
 

@@ -31,9 +31,11 @@ var Placeholder = require("./letter.js")
 
 		var placeholder = new Placeholder([],global.nums);
         placeholder.replace();
-       
+        
+       	console.log("-------------------------------")
 	    console.log("Wins: " + global.wins)
 		console.log("Losses: " + global.losses)
+		console.log("-------------------------------")
 		console.log("Yay! New word!")
 
 	};
