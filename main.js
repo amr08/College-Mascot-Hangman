@@ -11,51 +11,49 @@
 
 		if(isInWord) {
 
-	 		for(var k = 0; k < global.nums; k++) {
+	 		for(var k = 0; k < nums; k++) {
 
-	            if (global.wordPicked[k] == global.userInput) {
-	                global.holders[k] = global.userInput;
-
+	            if (wordPicked[k] == userInput) {
+	                holders[k] = userInput;
 
 	            }
+
 	        }
 
 	    }   
 
 	    else  {
-	            global.guessesLeft--;
-	            console.log("Your Guesses Left " + guessesLeft)
-	         	alreadyGuessed.push(global.userInput)
-	          	console.log("letters already guessed: " + global.alreadyGuessed)
+	            guessesLeft--;
+	            console.log("Your Guesses Left " + guessesLeft);
+	         	alreadyGuessed.push(userInput);
+	          	console.log("letters already guessed: " + alreadyGuessed);
 
 	    }
 
- 		
 		rounds();
-		console.log(global.holders)
-		global.getInput();	
-
-
+		console.log(holders);
+		getInput();	
+		
     }
 
 
 //keeps track of guesse and right answers.  Ends and sends game back to game.js
 	var rounds = function() {
 
-        if(global.letters.toString() == global.holders.toString()) {
-        	console.log(global.holders)
-            wins++
-            console.log("-------------------------------")
-            console.log("Answer: '" + wordPicked + "', Nice job!")
+        if(letters.toString() == holders.toString()) {
+        	console.log(holders);
+            wins++;
+            console.log("-------------------------------");
+            console.log("Answer: '" + wordPicked + "', Nice job!");
             game.wordSetUp();
     
         }	
 
         else if (global.guessesLeft===0) {
-        	console.log("-------------------------------")
-        	console.log("Aww, try again...")
-        	console.log("-------------------------------")
-            losses++
+        	console.log("-------------------------------");
+        	console.log("Aww, try again...");
+        	console.log("-------------------------------");
+            losses++;
             game.wordSetUp();
 
         }

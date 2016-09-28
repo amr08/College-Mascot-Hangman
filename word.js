@@ -4,16 +4,15 @@
 	
 	var inquirer = require("inquirer");
 	var game = require('./game.js');
-	var main = require("./main.js")
+	var main = require("./main.js");
   
-
 
 	game.wordSetUp();
 
 
-	global.userInput = []
-	global.userGuessWord = []
-	global.isInWord = []
+	global.userInput = [];
+	global.userGuessWord = [];
+	global.isInWord = [];
     	
 
 //gets user input
@@ -46,9 +45,9 @@
 
 		isInWord = false;
 
-			for (var j = 0; j < global.nums; j++) {
+			for (var j = 0; j < nums; j++) {
 
-				if(userInput == global.wordPicked[j]) {
+				if(userInput == wordPicked[j]) {
 					isInWord = true;
 				
 				}

@@ -2,16 +2,16 @@
 
 //Your game.js file will randomly select a word for the player.
 
-var Placeholder = require("./letter.js")
+var Placeholder = require("./letter.js");
 
 
 	global.word = ["seminoles", "gators", "fightingirish", "ducks", "longhorns"];
 	global.wordPicked = "";
     global.letters = [];
-    global.alreadyGuessed = []
+    global.alreadyGuessed = [];
     global.holders = [];
-    global.nums = 0;
 
+    global.nums = 0;
     global.wins = 0;
 	global.losses = 0;
 	global.guessesLeft = 10;
@@ -29,14 +29,14 @@ var Placeholder = require("./letter.js")
 		alreadyGuessed = [];
         holders = [];
 
-		var placeholder = new Placeholder([],global.nums);
+		var placeholder = new Placeholder([],nums);
         placeholder.replace();
-        
-       	console.log("-------------------------------")
-	    console.log("Wins: " + global.wins)
-		console.log("Losses: " + global.losses)
-		console.log("-------------------------------")
-		console.log("Yay! New word!")
+
+       	console.log("-------------------------------");
+	    console.log("Wins: " + wins);
+		console.log("Losses: " + losses);
+		console.log("-------------------------------");
+		console.log("Yay! New word!");
 
 	};
      

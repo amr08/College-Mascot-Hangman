@@ -12,13 +12,12 @@
 	
 
 Placeholder.prototype.replace = function (){
-	        for(var i = 0; i <global.nums; i++) {
-			global.holders.push("_")
+	        for(var i = 0; i <nums; i++) {
+				holders.push("_");
 			
 			}
 
 		};
-
 
 module.exports = Placeholder;
 
