@@ -1,62 +1,56 @@
 
 
 // //should contain all of the methods wich will check the letters guess vs the random word selected
-	
-	var inquirer = require("inquirer");
-	var game = require('./game.js');
-	var main = require("./main.js");
   
+  var inquirer = require("inquirer");
+  var game = require('./game.js');
+  var main = require("./main.js");
+  
+  game.wordSetUp();
 
-	game.wordSetUp();
-
-
-	global.userInput = [];
-	global.userGuessWord = [];
-	global.isInWord = [];
-    	
-
+  global.userInput = [];
+  global.userGuessWord = [];
+  global.isInWord = [];
+      
 //gets user input
 
-	global.getInput = function() {
+  global.getInput = function() {
 
-		inquirer.prompt([
+    inquirer.prompt([
 
-			{
-				type: "input",
-				message: "Guess a letter",
-				name: "letter"
-			}
+      {
+        type: "input",
+        message: "Guess a letter",
+        name: "letter"
+      }
 
-			]).then(function (user) {
+      ]).then(function (user) {
 
-				userInput = user.letter
-				userGuessWord.push(user.letter);
-				checker();
+        userInput = user.letter
+        userGuessWord.push(user.letter);
+        checker();
 
-		});
+    });
 
-	};
-
-
+  };
 
 //checks to see if userguess is in word- if so returns true
 
-	var checker = function() {
+  var checker = function() {
 
-		isInWord = false;
+    isInWord = false;
 
-			for (var j = 0; j < nums; j++) {
+      for (var j = 0; j < nums; j++) {
 
-				if(userInput == wordPicked[j]) {
-					isInWord = true;
-				
-				}
+        if(userInput == wordPicked[j]) {
+          isInWord = true; 
+        }
 
-			}
+      }
 
-		inWord();	
-	      
-	};
+    inWord(); 
+        
+  };
 
 
 
